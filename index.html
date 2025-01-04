@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            margin-top: 15px;
+        }
+        .box2{
+            margin-top: 15px;
+            border: 1px solid #e9e5e5;
+            background-color: #e9e6e6;
+            padding: 10px;
+        }
+
+        .box{
+            width: 400px;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        .list {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: none;
+            border: 1px solid #be9696;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+        body{
+            background-color: rgb(233, 217, 194);
+        }
+        textarea{
+            width: 300px;
+            height: 200px;
+        }
+        #save{
+            display: none;
+        }
+        .text{
+            display: inline-block;
+        }
+        
+
+    </style>
+</head>
+<body>
+
+
+    <div class="box">
+        <form id="content">
+            <div class="list">
+                <label for="name">ism</label>
+                <input type="text" id="name" placeholder="ism">
+                <div class="error" id="nameerror">kamida 2 ta harfdan iborat bolishi kerak, lotin harflardan foydalaning</div>
+            </div>
+            <div class="list">
+                <label for="surname">familya</label>
+                <input type="text" id="surname" placeholder="familya">
+                <div class="error" id="surnameerror">kamida 2 ta harfdan iborat bolishi kerak, lotin harflardan foydalaning</div>
+            </div>
+            <div class="list">
+                <label for="date">tugilgan sana</label>
+                <input type="date" id="date">
+                <div class="error" id="dateerror">yoshingiz 18 dan kichik bolmasin</div>
+            </div>
+            <div class="list">
+                <label for="phone">tel raqam</label>
+                <input type="text" id="phone" placeholder="tel raqam">
+                <div class="error" id="phoneerror">raqamingizni togri kirting </div>
+            </div>
+            <div class="list">
+                <label for="password">parol</label>
+                <input type="password" id="password" placeholder="parol">
+                <div class="error" id="passworderror">parol kamida 8 ta belgidan iborat bolish kerak va katta, kichik harflar ham bolsin</div>
+            </div>
+            <div class="list">
+                <label for="confirmpassword">parolni tasdiqlash</label>
+                <input type="password" id="confirmpassword" placeholder="parol tasdiqlash">
+                <div class="error" id="confirmpassworderror">parolingizni qayta kirting"</div>
+            </div>
+            <div class="list">
+                <label for="manzil">manzil</label>
+                <textarea id="manzil" rows="3"></textarea>
+                <div class="error" id="manzilerror">manzilni kirting kamida 10 ta belgidan iborat bolsin </div>
+            </div>
+            <div class="list">
+                <label for="gender">jinsi</label>
+                <select id="gender">
+                    <option value="">tanlang</option>
+                    <option value="male">erkak</option>
+                    <option value="female">ayol</option>
+                </select>
+                <div class="error" id="gendererror">jinsingizni tanlang</div>
+            </div>
+            <div class="list">
+                <label for="check">rozilik bildiring</label>
+                <input type="checkbox" id="check">
+                <div class="error" id="checkerror">qoidalarga rozilik bildiring</div>
+            </div>
+            <button id="btn" disabled class="btn">yuborish</button>
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+    <!-- 1 -->
+
+    <!-- <input type="text" class="name" placeholder="ismingiz">
+    <button id="btn">ok</button>
+    <div class="res"></div> -->
+
+    <!-- 2 -->
+
+    <!-- <div class="box">
+        <div class="text" contenteditable >birnimalar</div>
+        <button id="edit">taxrirlash</button>
+        <button id="save">saqlash</button>
+    </div> -->
+
+    <!-- 3 -->
+<!-- 
+    <div class="box">
+        <input type="password" id="password" placeholder="parol">
+        <input type="password" id="password-res" placeholder="parolni tasdiqlash">
+        <button id="btn">tekshirish</button>
+    </div> -->
+
+    <!-- 4 -->
+
+    <!-- <div class="box">
+        <input type="color" id="color">
+        <button id="btn">create</button>
+    </div>
+    <div class="rang"></div> -->
+
+    <!-- 5 -->
+
+    <!-- <div class="box">
+        <input type="text" id="text" placeholder="shahar kirtinng">
+        <button id="btn">qoshish</button>
+        <ul class="list"></ul>
+    </div> -->
+
+    <!-- 6 -->
+
+    <!-- <div class="box">
+        <input type="text" id="text" placeholder="matn yozing">
+        <button id="btn">xabar yuborish</button>
+    </div>
+    <div class="message"></div> -->
+
+    <!-- 7 -->
+
+    <!-- <div class="box">
+        <input type="number" id="number" placeholder="yoshingizni kirting">
+        <button id="btn">ok</button>
+    </div>
+    <div class="message"></div> -->
+
+    <!-- 8 -->
+
+    <!-- <div class="box">
+        <input type="text" id="text" placeholder="rang kirting 'red', 'green', 'blue' ">
+        <button id="btn">rang ozgartirsh</button>
+    </div> -->
+
+    <!-- 9 -->
+
+    <!-- <div class="box">
+        <input type="text" id="familya" placeholder="familya kirting">
+        <input type="text" id="ism" placeholder="ism kirting">
+        <button id="btn">qoshish</button>
+        <ul class="list"></ul>
+    </div> -->
+
+    <!-- 10 -->
+<!-- 
+    <textarea id="text"></textarea><br>
+    <p>
+        <span id="count">0</span><span>/100</span>
+    </p> -->
+
+    <!-- 12 -->
+
+    <!-- <div class="box">
+        <input type="text" id="text" placeholder="mmatn yozing">
+        <button id="btn" disabled >tasdiqlash</button>
+    </div> -->
+
+    <!-- 13 -->
+
+    <!-- <div class="box">
+        <input type="text" id="name" placeholder="ismingizni kirting">
+        <input type="text" id="surname" placeholder="familyangizi kirting">
+        <input type="email" id="email" placeholder="email kirting">
+        <button id="btn">tozalash</button>
+    </div> -->
+
+    <!-- 14 -->
+
+    <!-- <div class="box">
+        <input type="text" id="text" placeholder="ism qidiring">
+        <ul class="list">
+            <li>Anvar</li>
+            <li>Odil</li>
+            <li>Komil</li>
+            <li>Dilshod</li>
+            <li>Sarvar</li>
+        </ul>
+    </div> -->
+
+    <!-- 15 -->
+
+
+    <!-- <div class="box">
+        <div class="text" contenteditable >birnimalar</div>
+        <button id="edit">taxrirlash</button>
+        <button id="save">saqlash</button>
+    </div> -->
+
+    <script src="./app.js"></script>
+</body>
+</html>
